@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>testtesttest</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Glassin</title>
+        <!-- Bootstrap Core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+        <!-- Theme CSS -->
+        <link href="css/creative.css" rel="stylesheet">
+        <!-- Slider CSS -->
+        <link href="css/slider.css" rel="stylesheet">
+        <!-- Core CSS file -->
+
+        <link href="gallery/lightgallery.css" rel="stylesheet">
+
+        <!-- jQuery -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <style media="screen">
+            .bcg{
+                /*background-image: url('img/portfolio/furra/1.jpg');*/
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 270px;
+                width: 100%;
+            }
+        </style>
+
+    </head>
+    <body>
+        <section class="no-padding" id="portfolio">
+            <div class="container-fluid">
+                <div class="row no-gutter">
+                    <div class="col-lg-4 col-sm-6">
+                        <a href="javascript:;" id="albiMall" data-max="3" class="showProject portfolio-box">
+                            <!-- <img src="img/portfolio/albiMall/1.jpg" class="img-responsive" alt=""> -->
+                            <div class="bcg" style="background-image: url('img/portfolio/albiMall/1-1.jpg');"></div>
+                            <div class="portfolio-box-caption">
+                                <div class="portfolio-box-caption-content">
+                                    <div class="project-category text-faded">
+                                        Projekti
+                                    </div>
+                                    <div class="project-name">
+                                        Albi Mall
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a href="javascript:;" id="furra" data-max="3" class="showProject portfolio-box">
+                            <!-- <img src="img/portfolio/furra/1-1.jpg" class="img-responsive" alt=""> -->
+                            <div class="bcg" style="background-image: url('img/portfolio/furra/1-1.jpg');"></div>
+                            <div class="portfolio-box-caption">
+                                <div class="portfolio-box-caption-content">
+                                    <div class="project-category text-faded">
+                                        Projekti
+                                    </div>
+                                    <div class="project-name">
+                                        Furra Qerimi
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a href="javascript:;" id="agroLlapi" data-max="8" class="showProject portfolio-box">
+                            <!-- <img src="img/portfolio/furra/1-1.jpg" class="img-responsive" alt=""> -->
+                            <div class="bcg" style="background-image: url('img/portfolio/agroLlapi/1-1.jpg');"></div>
+                            <div class="portfolio-box-caption">
+                                <div class="portfolio-box-caption-content">
+                                    <div class="project-category text-faded">
+                                        Projekti
+                                    </div>
+                                    <div class="project-name">
+                                        Agro Llapi
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a href="javascript:;" id="bpHomes" data-max="20" class="showProject portfolio-box">
+                            <!-- <img src="img/portfolio/furra/1-1.jpg" class="img-responsive" alt=""> -->
+                            <div class="bcg" style="background-image: url('img/portfolio/buhran/1-1.jpg');"></div>
+                            <div class="portfolio-box-caption">
+                                <div class="portfolio-box-caption-content">
+                                    <div class="project-category text-faded">
+                                        Projekti
+                                    </div>
+                                    <div class="project-name">
+                                        Buhran Zhdrella
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                    </div>
+                    <div class="col-lg-4 col-sm-6 popup-galler2">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                // $('.carousel').carousel();
+                $('.showProject').on('click', function() {
+                    var path = this.id;
+                    var max = $(this).data("max");
+                    var photos = [];
+                    for (var i = 1; i <= max; i++) {
+                        photos.push({"src":'img/portfolio/'+path+'/'+i+'.jpg','thumb':'img/portfolio/'+path+'/'+i+'-1.jpg'});
+                    }
+                    var $lg = $(this);
+                    $lg.lightGallery({
+                        zoom: true,
+                        dynamic: true,
+                        download: false,
+                        enableSwipe: true,
+                        enableDrag: true,
+                        cssEasing: '',
+                        easing: '',
+                        loop:true,
+                        dynamicEl: photos
+                    });
+                });
+            });
+        </script>
+        <script src="gallery/lightgallery.js"></script>
+        <script src="gallery/lg-thumbnail.js"></script>
+        <script src="gallery/jquery.mousewheel.min.js"></script>
+    </body>
+</html>

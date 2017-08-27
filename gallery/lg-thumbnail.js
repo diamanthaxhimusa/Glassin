@@ -136,7 +136,8 @@
         if (_this.core.s.animateThumb) {
             _this.core.$outer.find('.lg-thumb').css({
                 width: _this.thumbTotalWidth + 'px',
-                position: 'relative'
+                position: 'relative',
+                margin: 'auto'
             });
         }
 
